@@ -8,4 +8,12 @@ sudo apt-get update
 
 sudo apt-get install aptitude
 
-sudo aptitude install aircrack-ng ambiance-dark ap-hotspot chromium-browser cmake deluge djview dos2unix driftnet elinks g++ gedit-plugins ghostscript gimp git gksu gnash  gnuplot gnuplot-doc gnuplot-x11  gparted htop imagemagick inxi ipython ipython-notebook kmines laptop-mode-tools macchanger mc mercurial midori mpich nautilus-open-terminal pdf2djvu pinta putty putty-tools q4wine qtcreator qtcreator-doc rar reaver scidavis skype spyder texlive texlive-lang-cyrillic texstudio traceroute ubuntu-tweak vim virtualbox vkaudiosaver vlc wine 
+sudo aptitude install aircrack-ng ambiance-dark ap-hotspot chromium-browser cmake deluge djview dos2unix driftnet elinks g++ gedit-plugins ghostscript gimp git gksu gnash  gnuplot gnuplot-doc gnuplot-x11  gparted htop imagemagick inxi ipython ipython-notebook kmines laptop-mode-tools macchanger mc mercurial midori mpich nautilus-open-terminal pdf2djvu pinta putty putty-tools q4wine qtcreator qtcreator-doc rar reaver scidavis skype spyder texlive texlive-lang-cyrillic texstudio traceroute ubuntu-tweak vim virtualbox vlc wine 
+
+if [ "`uname -m`" == "x86_64" ]; then
+	wget -O vkaudiosaver.deb "http://vkaudiosaver.ru/downloads/vkaudiosaver-debian-amd64"
+else
+	wget -O vkaudiosaver.deb "http://vkaudiosaver.ru/downloads/vkaudiosaver-debian-i386"
+fi
+sudo dpkg -i vkaudiosaver.deb
+rm vkaudiosaver.deb
